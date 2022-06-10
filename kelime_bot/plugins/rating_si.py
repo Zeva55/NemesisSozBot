@@ -1,13 +1,13 @@
-from kelime_bot import rating
+from kelime_bot import reytinq
 from pyrogram import Client
 from pyrogram import filters
 from pyrogram.types import Message
 
 
-@Client.on_message(filters.command("skor"))
+@Client.on_message(filters.command("reytinq"))
 async def ratingsa(c:Client, m:Message):
     global rating
-    metin = """📝 Küresel Grup Derecelendirmesi :
+    metin = """📝 Qlobal Qrup Sıralaması :
 
 """
     eklenen = 0
