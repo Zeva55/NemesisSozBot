@@ -15,13 +15,13 @@ LOGGER = logging.getLogger(__name__)
 
 
 # Hesap
-API_ID = "15861235 "
+API_ID = "15861235"
 API_HASH = "00bc8529bf9c01bab15ba0e41cb42062"
 TOKEN = "5521869956:AAFKMT-QH4HFEqYtb_zaStMARfEmQgZZEKs" 
 USERNAME = "5290901760"
 
 
-
+ 
 
 # BOT CLIENTİ
 bot = Client(
