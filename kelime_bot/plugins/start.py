@@ -14,24 +14,24 @@ keyboard = InlineKeyboardMarkup([
         InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/karabakhsozBot?startgroup=new")
     ],
     [
-        InlineKeyboardButton("🇹🇷 Sahibim", url="https://t.me/thagiyevvvv"),
-        InlineKeyboardButton("💬 Chat", url="https://t.me/karabakhteammm"),
+        InlineKeyboardButton("😝 Sahibim", url="https://t.me/Rowlyn"),
+        InlineKeyboardButton("💬 Support", url="https://t.me/NemesisChat"),
     ]
 ])
 
 
 START = """
-**🔮 Merhaba, Kelimeleri tersten bulma oyununa hoş geldin..**
+**🏆 Salam, Sözləri Qarışığ Şəkildən Düzgün Tapmağ Oyununa Xoş Geldin..**
 
-➤ Bilgi için 👉 /help Tıklayın. Komutlar kolay ve basittir. 
+➤ Melumat üçün ⚡ /help Toxun. 
 """
 
 HELP = """
-**✌️ Komutlar Menüsüne Hoşgeldiniz.**
-/oyun - Oyunu başlatmak için..
-/kec - Üç adet hakkınız mevcut, oyunu geçmek için.. 
-/reytinq - Oyuncular arasındaki rekabet bilgisi..
-/cancel - Oyundan çıkmak için gerekli olan komuttur.. 
+**🐊 Əmrlər Menyusuna Xoş geldiniz.**
+/oyun - Oyunu başladmağ Üçün..
+/kec - Üç ədəd haqqınız mövcuddur, oyunu keçmek üçün.. 
+/reytinq - Oyunçular arasındaki rəqabət melumatı..
+/cancel - Oyundan çıxmağ üçün lazım olan əmrdir.. 
 """
 
 # Komutlar. 
@@ -55,9 +55,9 @@ async def kelimeoyun(c:Client, m:Message):
         aktif = False
 
     if aktif:
-        await m.reply("**❗ Oyun Zaten Grubunuzda Devam Ediyor ✍🏻 \n Oyunu durdurmak için yazıp /cancel durdurabilirsiniz")
+        await m.reply("**❗ Oyun Onsuzda Grubunuzda Davam Edir ✍🏻 \n Oyunu durdurmağ üçün  /cancel yazıb durdura bilersiniz")
     else:
-        await m.reply(f"**{m.from_user.mention}** Tarafından! \nKelime Bulma Oyunu Başladı .\n\nİyi Şanslar !", reply_markup=kanal)
+        await m.reply(f"**{m.from_user.mention}** Tərəfindən! \nSöz Tapmağ Oyunu Başladı .\n\nUğurlar !", reply_markup=kanal)
         
         oyun[m.chat.id] = {"kelime":kelime_sec()}
         oyun[m.chat.id]["aktif"] = True
@@ -75,11 +75,11 @@ async def kelimeoyun(c:Client, m:Message):
         text = f"""
 🎯 Raund : {oyun[m.chat.id]['round']}/60 
 📝 Söz :   <code>{kelime_list}</code>
-💰 Qazandığınız Puan: 1
+💰 Qazandığınız Xal: 1
 🔎 İpucu: 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 Uzunluk : {int(len(kelime_list)/2)} 
+✍🏻 Uzunluğ : {int(len(kelime_list)/2)} 
 
-✏️ Qarışık hərflərdən doğru kelimeyi bulun
+✏️ Qarışığ hərflərdən doğru sözü tapın
         """
         await c.send_message(m.chat.id, text)
         
