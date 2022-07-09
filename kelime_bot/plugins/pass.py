@@ -8,8 +8,8 @@ from kelime_bot import *
 
 
 
-@Client.on_message(filters.command("pass") & ~filters.private & ~filters.channel)
-async def passs(c:Client, m:Message):
+@Client.on_message(filters.command("kec") & ~filters.private & ~filters.channel)
+async def kec(c:Client, m:Message):
     global oyun
     
     try:
@@ -21,7 +21,7 @@ async def passs(c:Client, m:Message):
     if aktif:
         if oyun[m.chat.id]["kec"] < 3:
             oyun[m.chat.id]["kec"] += 1 
-            await c.send_message(m.chat.id,f"❗ Cəmi 3 keçiş haqqınız var!\n➡️ Söz Keçişi Çıxdı !\n✏️ Doğru Söz : **<code>{oyun[m.chat.id]['kelime']}</code>**")
+            await c.send_message(m.chat.id,f"❗ ᴄəᴍɪ 3 ᴋᴇᴄ̧ᴍᴇᴜ ʜᴀǫǫɪɴɪᴢ ᴠᴀʀ!\n➡️ sᴏ̈ᴢ ᴋᴇᴄ̧ɪşɪ ᴜɢ̆ᴜʀʟᴜᴅᴜʀ !\n✏️ ᴅᴜ̈ᴢɢᴜ̈ɴ sᴏ̈ᴢ : **<code>{oyun[m.chat.id]['kelime']}</code>**")
             
             oyun[m.chat.id]["kelime"] = kelime_sec()
             oyun[m.chat.id]["aktif"] = True
@@ -34,17 +34,17 @@ async def passs(c:Client, m:Message):
                 kelime_list+= harf + " "
             
             text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/60 
-📝 Kelime :   <code>{kelime_list}</code>
-💰 Qazandığınız Xal : 1
-🔎 İ𝗉𝗎𝖼𝗎 : 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 𝖴𝗓𝗎𝗇𝗅uğ: {int(len(kelime_list)/2)} 
+🎯 ʀᴀᴜɴᴅ : {oyun[m.chat.id]['round']}/60 
+📝 sᴏ̈ᴢ :   <code>{kelime_list}</code>
+💰 ǫᴀᴢᴀɴᴅɪɢ̆ɪɴɪᴢ xᴀʟ : 1
+🔎 ᴋᴏ̈ᴍᴇᴋ : 1. {oyun[m.chat.id]["kelime"][0]}
+✍🏻 ᴜᴢᴜɴʟᴜɢ̆: {int(len(kelime_list)/2)} 
 
-✏️ Qarışığ hərflərdən doğru sözü tapın
+✏️ ǫᴀʀɪşɪɢ̆ ʜᴇʀғʟᴇʀᴅᴇɴ ᴅᴏɢ̆ʀᴜ sᴏ̈ᴢᴜ̈ ᴛᴀᴘɪɴ
             """
             await c.send_message(m.chat.id, text)
             
         else:
-            await c.send_message(m.chat.id, f"<code>**❗ Geçiş Doğru Kaydedildi! </code> \n Oyunu durdurmak için yazıp /cancel durdurabilirsiniz✍🏻**")
+            await c.send_message(m.chat.id, f"<code>**❗ Kᴇᴄ̧ɪş ᴅᴜ̈ᴢɢᴜ̈ɴ ʏᴀᴅᴅᴀ ǫᴀʟᴅɪ! </code> \n ᴏʏᴜɴᴜ ᴅᴜʀᴅᴜʀᴍᴀɢ̆ ᴜ̈ᴄ̧ᴜ̈ɴ /cancel ʏᴀᴢɪʙ ᴅᴀʏᴀɴᴅɪʀᴀ ʙɪʟᴇʀsᴇɴ✍🏻**")
     else:
-        await m.reply(f"❗ **Grubunuzda oyun oynanmır!\n Yeni oyuna başlamağ üçün /oyun yazabilersiniz✍🏻**")
+        await m.reply(f"❗ **ɢʀᴜʙᴜɴᴜᴢᴅᴀ ᴏʏᴜɴ ᴏʏɴᴀɴᴍɪʀ!\n ʏᴇɴɪ ᴏʏᴜɴᴀ ʙᴀşʟᴀᴍᴀɢ̆ ᴜ̈ᴄ̧ᴜ̈ɴ /oyun ʏᴀᴢᴀ ʙɪʟᴇʀsᴇɴ✍🏻**")
