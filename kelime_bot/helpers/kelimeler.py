@@ -1,8 +1,5 @@
 import random
-kelimeler = ["ailə","ailəli"
-əzab
-əzbərləmək
-əzgil
+kelimeler = ["ailə", "ailəli", "əzab", "əzbərləmək", "əzgil",
 əziyyət
 əziz
 əzizləmək
