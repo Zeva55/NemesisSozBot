@@ -30,7 +30,7 @@ HELP = """
 **🐊 Əmrlər Menyusuna Xoş geldiniz.**
 /oyun - Oyunu başladmağ Üçün..
 /kec - Üç ədəd haqqınız mövcuddur, oyunu keçmek üçün.. 
-/reytinq - Oyunçular arasındaki rəqabət melumatı..
+/rating - Oyunçular arasındaki rəqabət melumatı..
 /cancel - Oyundan çıxmağ üçün lazım olan əmrdir.. 
 """
 
