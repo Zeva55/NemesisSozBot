@@ -1,13 +1,13 @@
 {
-    "name": "Bilgi Bot",
-    "description": "Telegram kelime bilgi oyun",
+    "name": "Qarışığ Sözü Tapmağ Botu",
+    "description": "Telegram söz melumat oyunu",
     "keywords": [
         "telegram",
         "bilgi",
         "kelime",
         "bot"
     ],
-    "repository": "https://github.com/Tuncay456/Se?organization=Tuncay456&organization=Tuncay456",
+    "repository": "https://github.com/RowLyn/NemesisSozBot",
     "website": "https://t.me/+0kf_3zSzsCszZWJk",
     "success_url": "https://t.me/+0kf_3zSzsCszZWJk",
     "env": {
