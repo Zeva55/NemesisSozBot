@@ -21,7 +21,7 @@ async def kec(c:Client, m:Message):
     if aktif:
         if oyun[m.chat.id]["kec"] < 3:
             oyun[m.chat.id]["kec"] += 1 
-            await c.send_message(m.chat.id,f"❗ ᴄəᴍɪ 3 ᴋᴇᴄ̧ᴍᴇᴜ ʜᴀǫǫɪɴɪᴢ ᴠᴀʀ!\n➡️ sᴏ̈ᴢ ᴋᴇᴄ̧ɪşɪ ᴜɢ̆ᴜʀʟᴜᴅᴜʀ !\n✏️ ᴅᴜ̈ᴢɢᴜ̈ɴ sᴏ̈ᴢ : **<code>{oyun[m.chat.id]['kelime']}</code>**")
+            await c.send_message(m.chat.id,f"❗ ᴄəᴍɪ 3 ᴋᴇᴄ̧ᴍᴇʏ ʜᴀǫǫɪɴɪᴢ ᴠᴀʀ!\n➡️ sᴏ̈ᴢ ᴋᴇᴄ̧ɪşɪ ᴜɢ̆ᴜʀʟᴜᴅᴜʀ !\n✏️ ᴅᴜ̈ᴢɢᴜ̈ɴ sᴏ̈ᴢ : **<code>{oyun[m.chat.id]['kelime']}</code>**")
             
             oyun[m.chat.id]["kelime"] = kelime_sec()
             oyun[m.chat.id]["aktif"] = True
