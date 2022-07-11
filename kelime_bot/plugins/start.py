@@ -11,27 +11,27 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 keyboard = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/karabakhsozBot?startgroup=new")
+        InlineKeyboardButton("➕ ǫʀᴜʙᴀ ᴇʟᴀᴠᴇ ᴇᴛ", url=f"http://t.me/nemesissozbot?startgroup=new")
     ],
     [
-        InlineKeyboardButton("😝 Sahibim", url="https://t.me/Rowlyn"),
-        InlineKeyboardButton("💬 Support", url="https://t.me/NemesisChat"),
+        InlineKeyboardButton("😝 sᴀʜɪʙɪᴍ", url="https://t.me/Rowlyn"),
+        InlineKeyboardButton("💬 ᴅᴇsᴛᴇᴋ ɢʀᴜʙᴜ", url="https://t.me/NemesisChat"),
     ]
 ])
 
 
 START = """
-**🏆 Salam, Sözləri Qarışığ Şəkildən Düzgün Tapmağ Oyununa Xoş Geldin..**
+**🏆 Sᴀʟᴀᴍ, Sᴏ̈ᴢʟəʀɪ Qᴀʀɪşɪɢ̆ şəᴋɪʟᴅəɴ ᴅᴜ̈ᴢɢᴜ̈ᴍ ғᴏʀᴍᴀᴅᴀ ᴛᴀᴘᴍᴀɢ̆ Oʏᴜɴᴜɴᴀ xᴏş ɢᴇʟᴅɪɴ**
 
-➤ Melumat üçün ⚡ /help Toxun. 
+➤ ᴍᴇʟᴜᴍᴀᴛ ᴜ̈ᴄ̧ᴜ̈ɴ ⚡ /help ʏᴀᴢ 
 """
 
 HELP = """
-**🐊 Əmrlər Menyusuna Xoş geldiniz.**
-/oyun - Oyunu başladmağ Üçün..
-/kec - Üç ədəd haqqınız mövcuddur, oyunu keçmek üçün.. 
-/rating - Oyunçular arasındaki rəqabət melumatı..
-/cancel - Oyundan çıxmağ üçün lazım olan əmrdir.. 
+**🐊 Əᴍʀʟəʀ ᴍᴇɴʏᴜsᴜɴᴀ xᴏş ɢᴇʟᴍɪsɪɴɪᴢ.**
+/oyun - ᴏʏᴜɴᴜ ʙᴀşʟᴀᴅᴍᴀɢ̆ ᴜ̈ᴄ̧ᴜ̈ɴ..
+/kec - ᴋᴇᴄ̧ᴍᴇᴋ ᴜ̈ᴄ̧ᴜ̈ɴ, 3 əᴅəᴅ ᴋᴇᴄ̧ᴍᴇᴋ ʜᴀǫǫɪɴɪᴢ ᴠᴀʀᴅɪʀ
+/rating - ᴏʏᴜɴᴄ̧ᴜʟᴀʀ ᴀʀᴀsɪɴᴅᴀᴋɪ ʀəǫᴀʙəᴛ ᴍᴇʟᴜᴍᴀʀɪ
+/cancel - ᴏʏᴜɴᴅᴀɴ ᴄ̧ɪxᴍᴀɢ̆ ᴜ̈ᴄ̧ᴜ̈ɴ ʟᴀᴢɪᴍ ᴏʟᴀɴ əᴍʀᴅɪʀ.. 
 """
 
 # Komutlar. 
@@ -55,9 +55,9 @@ async def kelimeoyun(c:Client, m:Message):
         aktif = False
 
     if aktif:
-        await m.reply("**❗ Oyun Onsuzda Grubunuzda Davam Edir ✍🏻 \n Oyunu durdurmağ üçün  /cancel yazıb durdura bilersiniz")
+        await m.reply("**❗ ᴏʏᴜᴍ ᴏɴsᴜᴢᴅᴀ ɢʀᴜʙᴜɴᴜᴢᴅᴀ ᴅᴀᴠᴀᴍ ᴇᴅɪʀ ✍🏻 \n ᴏʏᴜɴᴜ ᴅᴀʏᴀɴᴅɪʀᴍᴀɢ̆ ᴜ̈ᴄ̧ᴜ̈ɴ  /cancel ʏᴀᴢᴍᴀɢ̆ɪᴠɪᴢ ᴋɪғᴀʏᴇᴛᴅɪʀ")
     else:
-        await m.reply(f"**{m.from_user.mention}** Tərəfindən! \nSöz Tapmağ Oyunu Başladı .\n\nUğurlar !", reply_markup=kanal)
+        await m.reply(f"**{m.from_user.mention}** ᴛəʀəғɪɴᴅəɴ! \nsᴏ̈ᴢᴜ̈ ᴛᴀᴘᴍᴀɢ̆ ᴏʏᴜɴᴜ ʙᴀşʟᴀᴅɪ .\n\nᴜɢ̆ᴜʀʟᴀʀ !", reply_markup=kanal)
         
         oyun[m.chat.id] = {"kelime":kelime_sec()}
         oyun[m.chat.id]["aktif"] = True
@@ -73,13 +73,13 @@ async def kelimeoyun(c:Client, m:Message):
             kelime_list+= harf + " "
         
         text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/60 
-📝 Söz :   <code>{kelime_list}</code>
-💰 Qazandığınız Xal: 1
-🔎 İpucu: 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 Uzunluğ : {int(len(kelime_list)/2)} 
+🎯 ʀᴀᴜɴᴅ : {oyun[m.chat.id]['round']}/30
+📝 sᴏ̈ᴢ :   <code>{kelime_list}</code>
+💰 ǫᴀᴢᴀɴᴅɪɢ̆ɪɴɪᴢ  xᴀʟ: 1
+🔎 ᴋᴏ̈ᴍᴇᴋ: 1. {oyun[m.chat.id]["kelime"][0]}
+✍🏻 ᴜᴢᴜɴʟᴜɢ̆ : {int(len(kelime_list)/2)} 
 
-✏️ Qarışığ hərflərdən doğru sözü tapın
+✏️ ǫᴀʀɪşɪɢ̆ ᴠᴇʀɪʟᴍɪş ʜᴇʀᴅʟᴇʀᴅᴇɴ ᴅᴏɢ̆ʀᴜ sᴏ̈ᴢᴜ̈ ᴛᴀᴘɪɴ
         """
         await c.send_message(m.chat.id, text)
         
