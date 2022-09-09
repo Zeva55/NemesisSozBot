@@ -7,7 +7,8 @@ kelimeler = ["ailə", "ailəli", "əzab", "əzbərləmək", "əzgil",
              'kəlmə', 'sual', 'əmr', 'radyo', 'götürmək', 'sərhəd', 'sərhədsiz', 'üzülmək',   
              'darıxmaq', 'külək', 'sənəd', 'sümük', 'sahibsiz', 'vətən', 'əməliyyat', 'əziyyət',  
              'söyüş', 'meyxana', 'istəmək', 'danışmaq', 'gülmək', 'azərbaycanlı', 'namaz', 'görüşmək',  
-             'mahnı', 'restoran', 'riyaziyyat', 'səhvsiz', 'səməni', 'həyat', 'küçələr', 'yerimək', 'televizor', 
+             'mahnı', 'restoran', 'riyaziyyat', 'səhvsiz', 'səməni', 'həyat', 'küçələr', 'yerimək', 'televizor', 'Taxta', 
+             'Geyim', 'Bahalı', 'Əziyyət', 'Kəlimə', 'Döşək', 'Yorğan', 'Doqquz', 'Jaket', 'Şkaf',
              ]
 
 
